@@ -14,7 +14,7 @@ export default function QuickSpaceFeatures() {
       textClass: "text-gray-500",
       titleClass: "text-navy",
       visual: (
-        <div className="absolute right-0 top-20 bottom-0 w-[85%] bg-gray-50 rounded-tl-2xl border-t border-l border-gray-200 shadow-sm overflow-hidden flex flex-col pointer-events-none group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-700 ease-out z-0">
+        <div className="hidden md:flex absolute right-0 top-20 bottom-0 w-[85%] bg-gray-50 rounded-tl-2xl border-t border-l border-gray-200 shadow-sm overflow-hidden flex-col pointer-events-none group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-700 ease-out z-0">
           {/* Dashboard Header */}
           <div className="h-10 border-b border-gray-200 bg-white flex items-center px-4 justify-between shrink-0">
             <div className="flex items-center gap-2">
@@ -82,7 +82,7 @@ export default function QuickSpaceFeatures() {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/30 to-transparent pointer-events-none z-0 overflow-hidden">
            {/* Abstract Data / Web App Visual */}
            <div className="absolute -right-8 -bottom-8 w-40 h-40 bg-indigo-100 rounded-full blur-3xl opacity-50 group-hover:scale-125 transition-transform duration-700 ease-out"></div>
-           <div className="absolute right-4 bottom-4 flex gap-2 items-end opacity-40 group-hover:opacity-70 transition-opacity duration-700">
+           <div className="hidden sm:flex absolute right-4 bottom-4 gap-2 items-end opacity-40 group-hover:opacity-70 transition-opacity duration-700">
              <div className="w-4 h-12 bg-indigo-400 rounded-t-sm"></div>
              <div className="w-4 h-16 bg-navy rounded-t-sm"></div>
              <div className="w-4 h-8 bg-primary rounded-t-sm"></div>
@@ -100,7 +100,7 @@ export default function QuickSpaceFeatures() {
       textClass: "text-gray-500",
       titleClass: "text-navy",
       visual: (
-        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="hidden md:block absolute inset-0 pointer-events-none overflow-hidden z-0">
           <div className="absolute -right-4 top-16 w-40 h-32 border border-gray-200 rounded-lg bg-gray-50 shadow-sm group-hover:-translate-y-2 group-hover:rotate-3 transition-all duration-700 ease-out"></div>
           <div className="absolute right-4 top-24 w-40 h-36 border border-gray-200 rounded-lg bg-white shadow-lg group-hover:-translate-y-4 group-hover:-rotate-3 transition-all duration-700 ease-out flex flex-col overflow-hidden">
             <div className="h-4 bg-gray-100 flex items-center px-2 gap-1 border-b border-gray-200">
@@ -131,7 +131,7 @@ export default function QuickSpaceFeatures() {
       textClass: "text-gray-500",
       titleClass: "text-navy",
       visual: (
-        <div className="absolute right-12 top-10 bottom-[-20px] w-64 rounded-t-[2.5rem] border-[6px] border-gray-800 bg-gray-50 shadow-2xl pointer-events-none overflow-hidden group-hover:-translate-y-6 transition-transform duration-700 ease-out z-0">
+        <div className="hidden md:block absolute right-12 top-10 bottom-[-20px] w-64 rounded-t-[2.5rem] border-[6px] border-gray-800 bg-gray-50 shadow-2xl pointer-events-none overflow-hidden group-hover:-translate-y-6 transition-transform duration-700 ease-out z-0">
            {/* phone notch */}
            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-800 rounded-b-xl z-20"></div>
            
@@ -205,7 +205,7 @@ export default function QuickSpaceFeatures() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[220px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-auto md:auto-rows-[220px]">
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
@@ -213,7 +213,7 @@ export default function QuickSpaceFeatures() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.5, ease: "easeOut" }}
-              className={`p-8 rounded border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transition-all duration-300 group relative overflow-hidden flex flex-col justify-between cursor-pointer ${feature.className}`}
+              className={`p-6 sm:p-8 rounded border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transition-all duration-300 group relative overflow-hidden flex flex-col justify-between cursor-pointer min-h-[260px] md:min-h-0 ${feature.className}`}
             >
               {feature.visual}
               
@@ -226,7 +226,7 @@ export default function QuickSpaceFeatures() {
                 </div>
               </div>
               
-              <div className="z-10 mt-auto pt-6 max-w-[60%]">
+              <div className="z-10 mt-auto pt-6 max-w-full md:max-w-[60%]">
                 <h3 className={`text-xl font-bold mb-2 tracking-tight ${feature.titleClass}`}>{feature.title}</h3>
                 <p className={`text-sm leading-relaxed font-medium ${feature.textClass}`}>{feature.desc}</p>
               </div>

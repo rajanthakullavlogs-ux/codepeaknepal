@@ -81,18 +81,18 @@ export default function QuickSpaceSplitSections() {
                     <div className="w-8 h-8 rounded-lg bg-gray-50"></div>
                     <div className="w-8 h-8 rounded-lg bg-gray-50"></div>
                   </div>
-                  <div className="absolute top-16 left-20 right-4 bottom-4 flex flex-col gap-4">
-                    <div className="flex gap-4 h-24">
-                      <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col justify-between">
-                        <div className="w-1/2 h-3 bg-gray-100 rounded-full"></div>
-                        <div className="w-3/4 h-6 bg-navy rounded-full"></div>
+                  <div className="absolute top-16 left-12 md:left-20 right-4 bottom-4 flex flex-col gap-4">
+                    <div className="flex gap-2 md:gap-4 h-20 md:h-24">
+                      <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm p-2 md:p-4 flex flex-col justify-between">
+                        <div className="w-1/2 h-2 md:h-3 bg-gray-100 rounded-full"></div>
+                        <div className="w-3/4 h-4 md:h-6 bg-navy rounded-full"></div>
                       </div>
-                      <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col justify-between">
-                        <div className="w-1/2 h-3 bg-gray-100 rounded-full"></div>
-                        <div className="w-2/3 h-6 bg-primary rounded-full"></div>
+                      <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm p-2 md:p-4 flex flex-col justify-between">
+                        <div className="w-1/2 h-2 md:h-3 bg-gray-100 rounded-full"></div>
+                        <div className="w-2/3 h-4 md:h-6 bg-primary rounded-full"></div>
                       </div>
                     </div>
-                    <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm flex items-end p-6 gap-2">
+                    <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm flex items-end p-3 md:p-6 gap-1 md:gap-2">
                       <div className="flex-1 bg-indigo-100 rounded-t-lg h-[40%]"></div>
                       <div className="flex-1 bg-primary rounded-t-lg h-[80%]"></div>
                       <div className="flex-1 bg-indigo-200 rounded-t-lg h-[60%]"></div>
@@ -176,8 +176,8 @@ export default function QuickSpaceSplitSections() {
                     <div className="w-1 h-12 bg-gradient-to-b from-gray-200 to-indigo-200 transform -translate-y-2"></div>
 
                     {/* Center Hub / Application Block */}
-                    <div className="w-64 h-32 bg-white rounded-2xl shadow-xl border border-gray-200 flex flex-col p-4 z-20 group-hover:scale-105 transition-transform duration-500">
-                      <div className="flex justify-between items-center mb-4 border-b border-gray-50 pb-2">
+                    <div className="w-48 md:w-64 h-24 md:h-32 bg-white rounded-2xl shadow-xl border border-gray-200 flex flex-col p-3 md:p-4 z-20 group-hover:scale-105 transition-transform duration-500">
+                      <div className="flex justify-between items-center mb-2 md:mb-4 border-b border-gray-50 pb-2">
                         <div className="w-16 h-3 bg-gray-200 rounded-full"></div>
                         <div className="flex gap-1">
                           <div className="w-2 h-2 rounded-full bg-gray-200"></div>
@@ -201,11 +201,11 @@ export default function QuickSpaceSplitSections() {
                     <div className="w-1 h-12 bg-gradient-to-t from-gray-200 to-indigo-200 transform translate-y-2"></div>
 
                     {/* Bottom Mobile/Client Block */}
-                    <div className="flex gap-4 transform translate-y-4 group-hover:translate-y-6 transition-transform duration-500">
-                      <div className="w-24 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center p-2">
+                    <div className="flex gap-2 md:gap-4 transform translate-y-4 group-hover:translate-y-6 transition-transform duration-500">
+                      <div className="w-16 md:w-24 h-10 md:h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center p-1 md:p-2">
                         <div className="w-full h-full border-2 border-dashed border-gray-200 rounded-md"></div>
                       </div>
-                      <div className="w-24 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center p-2">
+                      <div className="w-16 md:w-24 h-10 md:h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center p-1 md:p-2">
                         <div className="w-full h-full border-2 border-dashed border-gray-200 rounded-md"></div>
                       </div>
                     </div>

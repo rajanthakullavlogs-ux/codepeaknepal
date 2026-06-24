@@ -83,8 +83,8 @@ export default function QuickSpaceHero() {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
                   </div>
                   
-                  <div className="flex-1 p-8 grid grid-cols-2 gap-8">
-                    <div className="flex flex-col gap-6">
+                  <div className="flex-1 p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                    <div className="flex flex-col gap-4 md:gap-6">
                       <div className="flex items-center gap-4 bg-white border border-gray-100 p-3 rounded-xl shadow-sm">
                         <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
@@ -145,21 +145,21 @@ export default function QuickSpaceHero() {
                 </div>
 
                 {/* --- FLOATING WEB ICON TOP RIGHT --- */}
-                <div className="absolute -top-6 -right-6 w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-indigo-600 border-4 border-[#F2F1FA] z-20 overflow-hidden shadow-xl flex items-center justify-center text-white">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <div className="absolute -top-4 md:-top-6 -right-4 md:-right-6 w-12 md:w-16 h-12 md:h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-indigo-600 border-4 border-[#F2F1FA] z-20 overflow-hidden shadow-xl flex items-center justify-center text-white">
+                  <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
 
                 {/* --- FLOATING APP ICON MID LEFT --- */}
-                <div className="absolute top-[30%] -left-8 w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 border-4 border-[#F2F1FA] z-20 overflow-hidden shadow-xl flex items-center justify-center text-white">
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <div className="absolute top-[30%] -left-4 md:-left-8 w-16 md:w-20 h-16 md:h-20 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 border-4 border-[#F2F1FA] z-20 overflow-hidden shadow-xl flex items-center justify-center text-white">
+                  <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
 
                 {/* --- FLOATING CUSTOM SOFTWARE CODE CARD (BOTTOM RIGHT) --- */}
-                <div className="absolute -bottom-8 -right-4 w-60 bg-[#1E1E2E] rounded-2xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)] z-30 overflow-hidden flex flex-col border border-gray-800 hover:-translate-y-2 transition-transform duration-300">
+                <div className="absolute -bottom-8 -right-4 w-48 md:w-60 bg-[#1E1E2E] rounded-2xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)] z-30 overflow-hidden hidden sm:flex flex-col border border-gray-800 hover:-translate-y-2 transition-transform duration-300">
                   <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/10 bg-[#181825]">
                     <div className="w-2.5 h-2.5 rounded-full bg-[#F38BA8]"></div>
                     <div className="w-2.5 h-2.5 rounded-full bg-[#F9E2AF]"></div>

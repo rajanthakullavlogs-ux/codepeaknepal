@@ -29,7 +29,7 @@ export default function QuickSpaceTestimonials() {
   const marqueeItems = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
 
   return (
-    <section className="py-20 bg-offwhite overflow-hidden border-b border-gray-100">
+    <section className="py-20 overflow-hidden border-b border-gray-100 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="flex flex-col md:flex-row justify-between items-end gap-8">
           <div className="max-w-2xl">

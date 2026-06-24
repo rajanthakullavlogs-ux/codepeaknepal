@@ -116,35 +116,7 @@ export default function ContactSection() {
               </motion.div>
             ))}
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="bg-primary p-8 rounded-[2rem] shadow-lg text-white"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <Clock className="w-6 h-6 text-blue-200" />
-                <h3 className="text-xl font-bold">Business Hours</h3>
-              </div>
-              <div className="space-y-4 text-blue-100 text-sm font-medium">
-                <div className="flex justify-between border-b border-blue-400/30 pb-3">
-                  <span>Monday - Friday</span>
-                  <span className="font-bold text-white">9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between border-b border-blue-400/30 pb-3">
-                  <span>Saturday</span>
-                  <span className="font-bold text-white">10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between pb-1">
-                  <span>Sunday</span>
-                  <span className="font-bold text-white">Closed</span>
-                </div>
-              </div>
-              <div className="mt-6 pt-4 border-t border-blue-400/30 text-xs text-blue-200">
-                * Response time within 24 hours on business days
-              </div>
-            </motion.div>
+
           </div>
 
           {/* Right Side: Contact Form */}

@@ -23,7 +23,7 @@ export default function TechStackMarquee() {
   const items = [...techStack, ...techStack];
 
   return (
-    <section className="py-12 bg-white border-y border-gray-100">
+    <section className="py-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           className="overflow-hidden"

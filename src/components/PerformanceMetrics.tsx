@@ -69,7 +69,7 @@ function AnimatedCircle({ label, delay }: { label: string; delay: number }) {
 
 export default function PerformanceMetrics() {
   return (
-    <section className="py-16 bg-white border-b border-gray-100">
+    <section className="py-16 border-b border-gray-100 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <ScrollReveal delay={0}>

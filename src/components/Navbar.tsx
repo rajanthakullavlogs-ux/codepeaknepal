@@ -1,9 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ChevronRight } from "lucide-react";
+
+const NAV_LINKS = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Contact", href: "/contact" },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,67 +26,101 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-4 left-4 right-4 md:left-8 md:right-8 lg:left-1/2 lg:-translate-x-1/2 lg:w-[calc(100%-4rem)] lg:max-w-7xl z-50 transition-all duration-300 rounded-full border ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-lg border-gray-200 py-0" : "bg-white/80 backdrop-blur-sm shadow-md shadow-gray-200/50 border-gray-200/60 py-1"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center gap-2">
-            {/* CodePeak Nepal Logo */}
-            <img src="/assets/codepeak-logo.png" alt="CodePeak Nepal Logo" className="h-8 w-auto" />
+    <>
+      <header
+        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[1200px] h-[72px] z-[100] transition-all duration-300 ease-in-out border border-gray-100 bg-white rounded-full ${
+          scrolled ? "shadow-[0_4px_24px_rgba(0,0,0,0.06)]" : "shadow-sm"
+        }`}
+      >
+        <div className="px-6 md:px-8 h-full flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 group">
+            <img 
+              src="/assets/codepeak-logo.png" 
+              alt="Logo" 
+              className="h-[36px] md:h-[48px] w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" 
+            />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8 font-medium">
-            <Link href="/" className="text-navy hover:text-primary transition-colors">Home</Link>
-            <Link href="/about" className="text-navy hover:text-primary transition-colors">About</Link>
-            <Link href="/services" className="text-navy hover:text-primary transition-colors">Services</Link>
-            <Link href="/pricing" className="text-navy hover:text-primary transition-colors">Pricing</Link>
-            <Link href="/portfolio" className="text-navy hover:text-primary transition-colors">Portfolio</Link>
-            <Link href="/contact" className="text-navy hover:text-primary transition-colors">Contact</Link>
+          <nav className="hidden md:flex items-center gap-8">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="font-sans font-medium text-[15px] text-gray-500 hover:text-navy transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
           </nav>
 
-          <div className="hidden md:flex">
-            <Link href="/contact" className="bg-primary text-white px-6 py-2.5 rounded-md hover:bg-primary/90 transition-all duration-300 font-semibold shadow-md shadow-primary/25">
-              Get Started Free
+          <div className="hidden md:flex items-center">
+            <Link 
+              href="/contact" 
+              className="px-6 py-2.5 bg-gray-100 hover:bg-gray-200 text-navy rounded-full font-medium transition-colors"
+            >
+              Get started
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-navy"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden text-navy p-2"
+            onClick={() => setMobileMenuOpen(true)}
+            aria-label="Open Menu"
           >
-            {mobileMenuOpen ? <X /> : <Menu />}
+            <Menu size={24} />
           </button>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-100"
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 z-[1000] bg-white transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col ${
+          mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="px-6 h-[88px] flex items-center justify-between border-b border-gray-100 shrink-0">
+          <Link href="/" className="flex items-center gap-2 group" onClick={() => setMobileMenuOpen(false)}>
+            <img 
+              src="/assets/codepeak-logo.png" 
+              alt="Logo" 
+              className="h-[36px] md:h-[48px] w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" 
+            />
+          </Link>
+          <button
+            className="text-navy p-2 rounded-full hover:bg-gray-100"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Close Menu"
           >
-            <div className="px-4 py-6 flex flex-col gap-4">
-              <Link href="/" className="font-medium">Home</Link>
-              <Link href="/about" className="font-medium">About</Link>
-              <Link href="/services" className="font-medium">Services</Link>
-              <Link href="/pricing" className="font-medium">Pricing</Link>
-              <Link href="/portfolio" className="font-medium">Portfolio</Link>
-              <Link href="/contact" className="font-medium">Contact</Link>
-              <Link href="/contact" className="bg-primary text-white text-center px-6 py-3 rounded-md mt-4 font-semibold shadow-md shadow-primary/25">
-                Get Started Free
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+            <X size={24} />
+          </button>
+        </div>
+
+        <nav className="flex-1 overflow-y-auto px-6 py-8 flex flex-col gap-6">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="font-sans text-2xl font-medium text-gray-600 hover:text-navy flex items-center justify-between border-b border-gray-100 pb-4"
+            >
+              {link.name}
+              <ChevronRight className="text-primary" />
+            </Link>
+          ))}
+        </nav>
+
+        <div className="px-6 pb-8 shrink-0">
+          <Link 
+            href="/contact" 
+            className="block w-full text-center px-6 py-4 bg-primary text-white rounded-full font-bold transition-colors shadow-md shadow-primary/20"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Get started
+          </Link>
+        </div>
+      </div>
+    </>
   );
 }

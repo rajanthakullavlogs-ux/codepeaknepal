@@ -3,9 +3,6 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-// Initialize Gemini API
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
-
 export async function POST(req: Request) {
   try {
     const { message, history } = await req.json();
@@ -17,6 +14,9 @@ export async function POST(req: Request) {
     if (!process.env.GEMINI_API_KEY) {
       return NextResponse.json({ error: 'Gemini API key is not configured.' }, { status: 500 });
     }
+
+    // Initialize Gemini API inside the handler
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
     // Read the Knowledge Base
     const kbPath = path.join(process.cwd(), 'src', 'data', 'codepeaknepal_rag_knowledge_base.md');

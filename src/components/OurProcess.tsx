@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Search, PenTool, Code2, Rocket } from "lucide-react";
+import { ScrollReveal } from "./ScrollReveal";
 
 export default function OurProcess() {
   const steps = [
@@ -39,31 +39,21 @@ export default function OurProcess() {
     <section className="py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-primary font-semibold text-xs uppercase tracking-widest mb-6"
-          >
-            How We Work
-          </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold text-navy mb-6 tracking-tight"
-          >
-            Our Simple & Transparent Process
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-gray-500 font-medium"
-          >
-            From the initial idea to the final product launch, we follow a streamlined process to ensure exceptional quality and timely delivery.
-          </motion.p>
+          <ScrollReveal delay={0}>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-primary font-semibold text-xs uppercase tracking-widest mb-6">
+              How We Work
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-6 tracking-tight">
+              Our Simple & Transparent Process
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <p className="text-lg text-gray-500 font-medium">
+              From the initial idea to the final product launch, we follow a streamlined process to ensure exceptional quality and timely delivery.
+            </p>
+          </ScrollReveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 relative">
@@ -71,22 +61,17 @@ export default function OurProcess() {
           <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-[2px] bg-gray-100 z-0"></div>
           
           {steps.map((step, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.15 }}
-              className="relative flex flex-col items-center text-center group z-10"
-            >
-              <div className={`w-24 h-24 rounded-[2rem] flex items-center justify-center mb-8 bg-white border-4 border-white shadow-xl shadow-gray-200/50 group-hover:-translate-y-2 transition-transform duration-300 relative`}>
-                <div className={`w-full h-full rounded-[1.5rem] flex items-center justify-center ${step.color}`}>
-                  {step.icon}
+            <ScrollReveal key={idx} delay={idx * 0.15}>
+              <div className="relative flex flex-col items-center text-center group z-10">
+                <div className={`w-24 h-24 rounded-[2rem] flex items-center justify-center mb-8 bg-white border-4 border-white shadow-xl shadow-gray-200/50 group-hover:-translate-y-2 transition-transform duration-300 relative`}>
+                  <div className={`w-full h-full rounded-[1.5rem] flex items-center justify-center ${step.color}`}>
+                    {step.icon}
+                  </div>
                 </div>
+                <h3 className="text-xl font-bold text-navy mb-4">{step.title}</h3>
+                <p className="text-gray-500 font-medium leading-relaxed">{step.desc}</p>
               </div>
-              <h3 className="text-xl font-bold text-navy mb-4">{step.title}</h3>
-              <p className="text-gray-500 font-medium leading-relaxed">{step.desc}</p>
-            </motion.div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

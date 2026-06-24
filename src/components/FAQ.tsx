@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Plus, Minus, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { ScrollReveal } from "./ScrollReveal";
 
 const faqs = [
   {
@@ -45,52 +46,37 @@ export default function FAQ() {
           
           {/* Left Column - Sticky Header */}
           <div className="lg:col-span-5 lg:sticky lg:top-32">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50/80 border border-blue-100/50 text-primary font-bold text-sm tracking-wide mb-8 shadow-sm backdrop-blur-md"
-            >
-              <span className="relative flex h-2 w-2 mr-1">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              Support & FAQ
-            </motion.div>
+            <ScrollReveal delay={0}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50/80 border border-blue-100/50 text-primary font-bold text-sm tracking-wide mb-8 shadow-sm backdrop-blur-md">
+                <span className="relative flex h-2 w-2 mr-1">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                Support & FAQ
+              </div>
+            </ScrollReveal>
             
-            <motion.h2 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight mb-6 leading-[1.15]"
-            >
-              Got questions? <br/>
-              <span className="text-gray-400">We've got answers.</span>
-            </motion.h2>
+            <ScrollReveal delay={0.1}>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight mb-6 leading-[1.15]">
+                Got questions? <br/>
+                <span className="text-gray-400">We've got answers.</span>
+              </h2>
+            </ScrollReveal>
             
-            <motion.p 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-lg text-gray-500 font-medium mb-10 max-w-md leading-relaxed"
-            >
-              Find answers to the most common questions about our services, timelines, and processes. Need something specific?
-            </motion.p>
+            <ScrollReveal delay={0.2}>
+              <p className="text-lg text-gray-500 font-medium mb-10 max-w-md leading-relaxed">
+                Find answers to the most common questions about our services, timelines, and processes. Need something specific?
+              </p>
+            </ScrollReveal>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-navy text-white rounded-2xl font-bold hover:bg-primary transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
-                <MessageCircle className="w-5 h-5" />
-                Contact Support
-              </Link>
-            </motion.div>
+            <ScrollReveal delay={0.3}>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-navy text-white rounded-2xl font-bold hover:bg-primary transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                  <MessageCircle className="w-5 h-5" />
+                  Contact Support
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Right Column - Accordions */}
@@ -98,49 +84,46 @@ export default function FAQ() {
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`group border rounded-2xl overflow-hidden transition-all duration-500 ${
-                    isOpen 
-                      ? 'border-primary/20 shadow-xl shadow-primary/5 bg-white' 
-                      : 'border-gray-100 bg-gray-50/50 hover:bg-white hover:border-gray-200 hover:shadow-md'
-                  }`}
-                >
-                  <button 
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full px-6 py-5 flex items-start justify-between text-left focus:outline-none"
-                  >
-                    <span className={`font-semibold text-base sm:text-lg pr-6 transition-colors duration-300 ${isOpen ? 'text-primary' : 'text-navy group-hover:text-primary'}`}>
-                      {faq.question}
-                    </span>
-                    <div className={`shrink-0 w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-500 ${
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <div 
+                    className={`group border rounded-2xl overflow-hidden transition-all duration-500 ${
                       isOpen 
-                        ? 'bg-primary text-white rotate-180 shadow-sm shadow-primary/20' 
-                        : 'bg-white text-gray-400 border border-gray-200 group-hover:border-primary/30 group-hover:text-primary'
-                    }`}>
-                      {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                    </div>
-                  </button>
-                  
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
-                      >
-                        <div className="px-6 pb-6 text-gray-600 font-medium leading-relaxed text-base mt-1">
-                          {faq.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
+                        ? 'border-primary/20 shadow-xl shadow-primary/5 bg-white' 
+                        : 'border-gray-100 bg-gray-50/50 hover:bg-white hover:border-gray-200 hover:shadow-md'
+                    }`}
+                  >
+                    <button 
+                      onClick={() => toggleFAQ(index)}
+                      className="w-full px-6 py-5 flex items-start justify-between text-left focus:outline-none"
+                    >
+                      <span className={`font-semibold text-base sm:text-lg pr-6 transition-colors duration-300 ${isOpen ? 'text-primary' : 'text-navy group-hover:text-primary'}`}>
+                        {faq.question}
+                      </span>
+                      <div className={`shrink-0 w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-500 ${
+                        isOpen 
+                          ? 'bg-primary text-white rotate-180 shadow-sm shadow-primary/20' 
+                          : 'bg-white text-gray-400 border border-gray-200 group-hover:border-primary/30 group-hover:text-primary'
+                      }`}>
+                        {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                      </div>
+                    </button>
+                    
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+                        >
+                          <div className="px-6 pb-6 text-gray-600 font-medium leading-relaxed text-base mt-1">
+                            {faq.answer}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </ScrollReveal>
               );
             })}
           </div>

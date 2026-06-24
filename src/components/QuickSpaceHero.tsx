@@ -1,25 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { ScrollReveal } from "./ScrollReveal";
 
 export default function QuickSpaceHero() {
-  // Simple fade-up animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 15 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
 
   return (
     <section className="relative pt-20 pb-20 lg:pt-48 lg:pb-32 bg-white overflow-hidden border-b border-gray-100">
@@ -29,42 +14,40 @@ export default function QuickSpaceHero() {
           
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              <motion.div variants={itemVariants} className="mb-6">
+            <ScrollReveal delay={0.1}>
+              <div className="mb-6">
                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded bg-gray-50 border border-gray-200 text-gray-600 font-semibold text-xs uppercase tracking-widest">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                   Nepal's Premier Digital Agency
                 </span>
-              </motion.div>
+              </div>
+            </ScrollReveal>
 
-              <motion.h1 
-                variants={itemVariants}
-                className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-navy mb-8 tracking-tight leading-[1.15]"
-              >
+            <ScrollReveal delay={0.2}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-navy mb-8 tracking-tight leading-[1.15]">
                 Management Softwares, <span className="text-primary">AI Products</span> <br className="hidden md:block" /> & Professional Solutions.
-              </motion.h1>
-              
-              <motion.p 
-                variants={itemVariants}
-                className="text-lg md:text-xl text-gray-500 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium"
-              >
+              </h1>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={0.3}>
+              <p className="text-lg md:text-xl text-gray-500 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
                 CodePeak Nepal delivers high-end Management Software, AI integrations, and premium digital solutions tailored to your needs. From comprehensive systems to cutting-edge AI products, we transform your vision into reality.
-              </motion.p>
-              
-              <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
+              </p>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={0.4}>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
                 <Link href="/contact" className="w-full sm:w-auto bg-navy text-white px-8 py-4 rounded font-semibold hover:bg-navy/90 transition-colors duration-200 flex items-center justify-center gap-2 group">
                   Get Free Quote
                 </Link>
                 <Link href="https://wa.me/9779743568595" target="_blank" className="w-full sm:w-auto bg-white border border-gray-200 text-navy px-8 py-4 rounded font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center gap-2 group">
                   Chat on WhatsApp <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </motion.div>
+              </div>
+            </ScrollReveal>
 
-              <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 font-medium border-t border-gray-100 pt-8">
+            <ScrollReveal delay={0.5}>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 font-medium border-t border-gray-100 pt-8">
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-primary" />
                   <span>Free consultation</span>
@@ -77,33 +60,30 @@ export default function QuickSpaceHero() {
                   <Check className="w-4 h-4 text-primary" />
                   <span>12 Months Support</span>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Right Content - Clean Mockup */}
           <div className="flex-1 w-full relative lg:pl-10">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="relative w-full aspect-square max-w-lg mx-auto lg:max-w-none"
-            >
-              <div className="relative rounded bg-gray-50 p-2 border border-gray-200 shadow-sm">
-                <div className="rounded overflow-hidden border border-gray-100 bg-white">
-                  <div className="bg-gray-100 px-4 py-3 flex gap-2 items-center border-b border-gray-200">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
+            <ScrollReveal delay={0.3}>
+              <div className="relative w-full aspect-square max-w-lg mx-auto lg:max-w-none">
+                <div className="relative rounded bg-gray-50 p-2 border border-gray-200 shadow-sm">
+                  <div className="rounded overflow-hidden border border-gray-100 bg-white">
+                    <div className="bg-gray-100 px-4 py-3 flex gap-2 items-center border-b border-gray-200">
+                      <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                    </div>
+                    <img 
+                      src="/quickspace/Image.png" 
+                      alt="Dashboard Mockup" 
+                      className="w-full h-auto object-contain opacity-90"
+                    />
                   </div>
-                  <img 
-                    src="/quickspace/Image.png" 
-                    alt="Dashboard Mockup" 
-                    className="w-full h-auto object-contain opacity-90"
-                  />
                 </div>
               </div>
-            </motion.div>
+            </ScrollReveal>
           </div>
           
         </div>

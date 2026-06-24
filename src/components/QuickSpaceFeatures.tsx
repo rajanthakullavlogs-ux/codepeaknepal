@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Activity, Code2, Smartphone, Globe, ArrowUpRight } from "lucide-react";
+import { ScrollReveal } from "./ScrollReveal";
 
 export default function QuickSpaceFeatures() {
   const features = [
@@ -80,7 +80,6 @@ export default function QuickSpaceFeatures() {
       titleClass: "text-navy",
       visual: (
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/30 to-transparent pointer-events-none z-0 overflow-hidden">
-           {/* Abstract Data / Web App Visual */}
            <div className="absolute -right-8 -bottom-8 w-40 h-40 bg-indigo-100 rounded-full blur-3xl opacity-50 group-hover:scale-125 transition-transform duration-700 ease-out"></div>
            <div className="absolute right-4 bottom-4 flex gap-2 items-end opacity-40 group-hover:opacity-70 transition-opacity duration-700">
              <div className="w-4 h-12 bg-indigo-400 rounded-t-sm"></div>
@@ -132,19 +131,13 @@ export default function QuickSpaceFeatures() {
       titleClass: "text-navy",
       visual: (
         <div className="absolute right-12 top-10 bottom-[-20px] w-64 rounded-t-[2.5rem] border-[6px] border-gray-800 bg-gray-50 shadow-2xl pointer-events-none overflow-hidden group-hover:-translate-y-6 transition-transform duration-700 ease-out z-0">
-           {/* phone notch */}
            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-800 rounded-b-xl z-20"></div>
-           
-           {/* Mobile Header */}
            <div className="w-full bg-white pt-10 pb-4 px-5 border-b border-gray-100 flex justify-between items-center">
              <div className="w-6 h-6 rounded-full bg-gray-100"></div>
              <div className="w-1/2 h-3 bg-gray-200 rounded-full"></div>
              <div className="w-6 h-6 rounded-full bg-gray-100"></div>
            </div>
-
-           {/* phone content */}
            <div className="w-full h-full p-4 flex flex-col gap-4 bg-gray-50">
-             {/* Feed Item 1 */}
              <div className="w-full bg-white rounded-xl shadow-sm border border-gray-100 p-3">
                <div className="flex items-center gap-3 mb-3">
                  <div className="w-8 h-8 rounded-full bg-indigo-100 flex-shrink-0"></div>
@@ -155,7 +148,6 @@ export default function QuickSpaceFeatures() {
                </div>
                <div className="w-full h-16 bg-gray-50 rounded-lg mb-2"></div>
              </div>
-             {/* Feed Item 2 */}
              <div className="w-full bg-white rounded-xl shadow-sm border border-gray-100 p-3">
                <div className="flex items-center gap-3 mb-2">
                  <div className="w-8 h-8 rounded-full bg-green-100 flex-shrink-0"></div>
@@ -177,60 +169,47 @@ export default function QuickSpaceFeatures() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white border border-gray-200 text-gray-600 font-semibold text-xs uppercase tracking-widest mb-6"
-            >
-              Core Competencies
-            </motion.div>
-            <motion.h2 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight leading-tight"
-            >
-              Enterprise Solutions
-            </motion.h2>
+            <ScrollReveal delay={0}>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white border border-gray-200 text-gray-600 font-semibold text-xs uppercase tracking-widest mb-6">
+                Core Competencies
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+                Enterprise Solutions
+              </h2>
+            </ScrollReveal>
           </div>
-          <motion.p 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-gray-500 max-w-lg md:text-right font-medium"
-          >
-            Comprehensive digital solutions tailored to transform your business operations and scale your impact.
-          </motion.p>
+          <ScrollReveal delay={0.2}>
+            <p className="text-lg text-gray-500 max-w-lg md:text-right font-medium">
+              Comprehensive digital solutions tailored to transform your business operations and scale your impact.
+            </p>
+          </ScrollReveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[220px]">
           {features.map((feature, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.5, ease: "easeOut" }}
-              className={`p-8 rounded border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transition-all duration-300 group relative overflow-hidden flex flex-col justify-between cursor-pointer ${feature.className}`}
-            >
-              {feature.visual}
-              
-              <div className="flex justify-between items-start z-10">
-                <div className={`w-12 h-12 rounded flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-1 ${feature.iconClass}`}>
-                  {feature.icon}
+            <ScrollReveal key={idx} delay={idx * 0.1}>
+              <div
+                className={`p-8 rounded border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transition-all duration-300 group relative overflow-hidden flex flex-col justify-between cursor-pointer h-full ${feature.className}`}
+              >
+                {feature.visual}
+                
+                <div className="flex justify-between items-start z-10">
+                  <div className={`w-12 h-12 rounded flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-1 ${feature.iconClass}`}>
+                    {feature.icon}
+                  </div>
+                  <div className="w-8 h-8 rounded border border-gray-200 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 shadow-sm">
+                    <ArrowUpRight className={`w-4 h-4 ${feature.titleClass}`} />
+                  </div>
                 </div>
-                <div className="w-8 h-8 rounded border border-gray-200 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 shadow-sm">
-                  <ArrowUpRight className={`w-4 h-4 ${feature.titleClass}`} />
+                
+                <div className="z-10 mt-auto pt-6 max-w-[60%]">
+                  <h3 className={`text-xl font-bold mb-2 tracking-tight ${feature.titleClass}`}>{feature.title}</h3>
+                  <p className={`text-sm leading-relaxed font-medium ${feature.textClass}`}>{feature.desc}</p>
                 </div>
               </div>
-              
-              <div className="z-10 mt-auto pt-6 max-w-[60%]">
-                <h3 className={`text-xl font-bold mb-2 tracking-tight ${feature.titleClass}`}>{feature.title}</h3>
-                <p className={`text-sm leading-relaxed font-medium ${feature.textClass}`}>{feature.desc}</p>
-              </div>
-            </motion.div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

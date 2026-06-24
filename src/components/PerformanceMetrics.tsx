@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
+import { ScrollReveal } from "./ScrollReveal";
 
 function AnimatedCircle({ label, delay }: { label: string; delay: number }) {
   const [count, setCount] = useState(0);
@@ -71,25 +72,33 @@ export default function PerformanceMetrics() {
     <section className="py-16 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold text-xs uppercase tracking-widest mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-            Flawless Execution
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-navy mb-6 tracking-tight">
-            We build websites that <br className="hidden md:block" />
-            <span className="text-emerald-500">score 100%</span> across the board.
-          </h2>
-          <p className="text-lg text-gray-500 font-medium">
-            No compromises. Our enterprise solutions are perfectly optimized for performance, accessibility, best practices, and search engines.
-          </p>
+          <ScrollReveal delay={0}>
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold text-xs uppercase tracking-widest mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Flawless Execution
+            </span>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-3xl md:text-5xl font-bold text-navy mb-6 tracking-tight">
+              We build websites that <br className="hidden md:block" />
+              <span className="text-emerald-500">score 100%</span> across the board.
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <p className="text-lg text-gray-500 font-medium">
+              No compromises. Our enterprise solutions are perfectly optimized for performance, accessibility, best practices, and search engines.
+            </p>
+          </ScrollReveal>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24">
-          <AnimatedCircle label="Performance" delay={0.2} />
-          <AnimatedCircle label="Accessibility" delay={0.4} />
-          <AnimatedCircle label="Best Practices" delay={0.6} />
-          <AnimatedCircle label="SEO" delay={0.8} />
-        </div>
+        <ScrollReveal delay={0.3}>
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24">
+            <AnimatedCircle label="Performance" delay={0.2} />
+            <AnimatedCircle label="Accessibility" delay={0.4} />
+            <AnimatedCircle label="Best Practices" delay={0.6} />
+            <AnimatedCircle label="SEO" delay={0.8} />
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

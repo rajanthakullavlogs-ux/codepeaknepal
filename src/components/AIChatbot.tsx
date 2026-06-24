@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Bot, User, Sparkles } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import { Spinner } from "./Spinner";
 
 type Message = {
   role: "user" | "model";
@@ -163,9 +164,7 @@ export default function AIChatbot() {
                       <Sparkles className="w-4 h-4" />
                     </div>
                     <div className="bg-white border border-gray-100 shadow-sm px-4 py-3 rounded-[1.5rem] rounded-bl-sm flex items-center gap-1.5 h-[44px]">
-                      <motion.div className="w-2 h-2 bg-gray-400 rounded-full" animate={{ y: [0, -4, 0] }} transition={{ duration: 0.6, repeat: Infinity, delay: 0 }} />
-                      <motion.div className="w-2 h-2 bg-gray-400 rounded-full" animate={{ y: [0, -4, 0] }} transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }} />
-                      <motion.div className="w-2 h-2 bg-gray-400 rounded-full" animate={{ y: [0, -4, 0] }} transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }} />
+                      <Spinner size="sm" />
                     </div>
                   </div>
                 </div>

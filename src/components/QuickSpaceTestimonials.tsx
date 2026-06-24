@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ScrollReveal } from "./ScrollReveal";
 
 export default function QuickSpaceTestimonials() {
   const testimonials = [
@@ -32,32 +33,22 @@ export default function QuickSpaceTestimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="flex flex-col md:flex-row justify-between items-end gap-8">
           <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white border border-gray-200 text-gray-600 font-semibold text-xs uppercase tracking-widest mb-6"
-            >
-              Client Feedback
-            </motion.div>
-            <motion.h2 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight leading-tight"
-            >
-              Trusted by Industry Leaders
-            </motion.h2>
+            <ScrollReveal delay={0}>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white border border-gray-200 text-gray-600 font-semibold text-xs uppercase tracking-widest mb-6">
+                Client Feedback
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+                Trusted by Industry Leaders
+              </h2>
+            </ScrollReveal>
           </div>
-          <motion.p 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-gray-500 max-w-md md:text-right font-medium"
-          >
-            Read how we have empowered businesses across Nepal with high-performance digital solutions.
-          </motion.p>
+          <ScrollReveal delay={0.2}>
+            <p className="text-lg text-gray-500 max-w-md md:text-right font-medium">
+              Read how we have empowered businesses across Nepal with high-performance digital solutions.
+            </p>
+          </ScrollReveal>
         </div>
       </div>
 

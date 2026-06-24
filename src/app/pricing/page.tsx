@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
 import { PRICING_CONTENT } from "@/data/content";
 import { Check, Sparkles, Globe, Wrench, ShieldCheck, Monitor, Smartphone, Code } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
-const container = {
+const container: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -17,7 +17,7 @@ const container = {
   }
 };
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
 };

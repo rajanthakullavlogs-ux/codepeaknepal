@@ -1,7 +1,27 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { rateLimit } from '@/lib/rateLimit';
+import { sanitizeInput, validateEmail } from '@/lib/security';
+
 export async function POST(req: Request) {
   try {
+    // 1. IP-based Rate Limiting (Spam / DDoS Protection)
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || req.headers.get('x-real-ip') || '127.0.0.1';
+    const limitResult = rateLimit(ip, 5, 60000); // Max 5 submissions per minute
+
+    if (!limitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many submissions. Please wait a minute before trying again.' },
+        { 
+          status: 429,
+          headers: {
+            'Retry-After': Math.ceil((limitResult.resetTime - Date.now()) / 1000).toString()
+          }
+        }
+      );
+    }
+
+    // 2. Parse payload
     const { name, email, phone, subject, message } = await req.json();
 
     // Basic Validation
@@ -9,7 +29,19 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
     }
 
-    // 2. Send Email via Nodemailer
+    // 3. Email Format Validation
+    if (!validateEmail(email)) {
+      return NextResponse.json({ error: 'Please provide a valid email address' }, { status: 400 });
+    }
+
+    // 4. Sanitize and Limit Lengths to prevent database/payload bloat
+    const safeName = sanitizeInput(name, 100);
+    const safeEmail = sanitizeInput(email, 100);
+    const safePhone = sanitizeInput(phone, 30);
+    const safeSubject = sanitizeInput(subject, 200);
+    const safeMessage = sanitizeInput(message, 5000);
+
+    // 5. Send Email via Nodemailer
     try {
       const transporter = nodemailer.createTransport({
         service: process.env.EMAIL_SERVICE || 'gmail',
@@ -22,16 +54,16 @@ export async function POST(req: Request) {
       await transporter.sendMail({
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER, // sending to yourself (or an admin email)
-        replyTo: email,
-        subject: `New Contact: ${subject}`,
+        replyTo: safeEmail,
+        subject: `New Contact: ${safeSubject}`,
         html: `
           <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Subject:</strong> ${subject}</p>
+          <p><strong>Name:</strong> ${safeName}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
+          <p><strong>Phone:</strong> ${safePhone}</p>
+          <p><strong>Subject:</strong> ${safeSubject}</p>
           <p><strong>Message:</strong></p>
-          <p>${message}</p>
+          <p style="white-space: pre-wrap;">${safeMessage}</p>
         `,
       });
     } catch (emailError) {

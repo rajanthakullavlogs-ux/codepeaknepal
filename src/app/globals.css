@@ -9,11 +9,9 @@
     --radial-grid-color: rgba(0, 0, 0, 0.03);
   }
   
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --grid-line-color: rgba(255, 255, 255, 0.02);
-      --radial-grid-color: rgba(255, 255, 255, 0.02);
-    }
+  :root.dark {
+    --grid-line-color: rgba(255, 255, 255, 0.02);
+    --radial-grid-color: rgba(255, 255, 255, 0.02);
   }
 
   html, body {
@@ -25,11 +23,9 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .navbar-logo {
-    filter: brightness(0) invert(1) !important;
-    mix-blend-mode: normal !important;
-  }
+.dark .navbar-logo {
+  filter: brightness(0) invert(1) !important;
+  mix-blend-mode: normal !important;
 }
 
 @layer utilities {

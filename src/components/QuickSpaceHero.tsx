@@ -28,29 +28,29 @@ export default function QuickSpaceHero() {
           {/* Left Content */}
           <div className="w-full lg:flex-[1.15] text-center lg:text-left">
             <ScrollReveal delay={0.1}>
-              <h1 className="text-5xl md:text-6xl lg:text-[70px] font-extrabold text-[#111111] mb-6 tracking-tight leading-tight">
-                Scalable Websites, <br className="hidden lg:block"/> <span className="text-[#2D45FF]">Mobile Apps</span> & <br className="hidden lg:block"/> Custom Software
+              <h1 className="text-5xl md:text-6xl lg:text-[70px] font-extrabold text-[#111111] dark:text-white mb-6 tracking-tight leading-tight">
+                Scalable Websites, <br className="hidden lg:block"/> <span className="text-[#2D45FF] dark:text-blue-400">Mobile Apps</span> & <br className="hidden lg:block"/> Custom Software
               </h1>
             </ScrollReveal>
             
             <ScrollReveal delay={0.2}>
-              <p className="text-lg md:text-[20px] text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-lg md:text-[20px] text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 CodePeak Nepal engineers high-performance web applications, native mobile experiences, and robust enterprise software. We transform complex challenges into scalable, cutting-edge digital solutions tailored to your business.
               </p>
             </ScrollReveal>
             
             <ScrollReveal delay={0.3}>
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 mb-8 text-sm md:text-[15px] font-medium text-gray-600">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 mb-8 text-sm md:text-[15px] font-medium text-gray-600 dark:text-gray-300">
                 <div className="flex items-center gap-2">
-                  <Code2 className="w-5 h-5 text-gray-700" />
+                  <Code2 className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                   <span>Custom Architecture</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Rocket className="w-5 h-5 text-gray-700" />
+                  <Rocket className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                   <span>Rapid Deployment</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-gray-700" />
+                  <ShieldCheck className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                   <span>Enterprise Security</span>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function QuickSpaceHero() {
                 <Link href="/contact" className="w-full sm:w-auto bg-[#2D45FF] text-white px-7 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center shadow-lg shadow-blue-500/30 text-[17px]">
                   Get a free quote
                 </Link>
-                <Link href="https://wa.me/9779743568595" target="_blank" className="w-full sm:w-auto bg-white border border-gray-200 text-gray-800 px-7 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm text-[17px] group">
+                <Link href="https://wa.me/9779743568595" target="_blank" className="w-full sm:w-auto bg-white dark:bg-[#1E2330] border border-gray-200 dark:border-gray-800 text-gray-800 dark:text-white px-7 py-4 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm text-[17px] group">
                   Chat on WhatsApp <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

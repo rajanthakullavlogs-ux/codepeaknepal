@@ -37,7 +37,7 @@ export default function Navbar() {
             <img 
               src="/assets/codepeak-logo.png" 
               alt="Logo" 
-              className="h-[36px] md:h-[48px] w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" 
+              className="h-[36px] md:h-[48px] w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 navbar-logo" 
             />
           </Link>
 
@@ -85,7 +85,7 @@ export default function Navbar() {
             <img 
               src="/assets/codepeak-logo.png" 
               alt="Logo" 
-              className="h-[36px] md:h-[48px] w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" 
+              className="h-[36px] md:h-[48px] w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 navbar-logo" 
             />
           </Link>
           <button

@@ -65,39 +65,39 @@ export default function QuickSpaceSplitSections() {
 
             <div className="flex-1 w-full relative flex justify-center">
               <ScrollReveal delay={0.2} className="w-full flex justify-center">
-                <div className="relative w-full max-w-md aspect-square bg-gray-50 rounded-2xl border border-gray-200 shadow-xl overflow-hidden">
+                <div className="relative w-full max-w-md aspect-square bg-gray-50 dark:bg-[#151926] rounded-2xl border border-gray-200 dark:border-gray-800 shadow-xl overflow-hidden">
                   {/* Abstract Dashboard Visual */}
-                  <div className="absolute top-0 w-full h-12 bg-white border-b border-gray-100 flex items-center px-4 gap-4">
+                  <div className="absolute top-0 w-full h-12 bg-white dark:bg-[#1E2330] border-b border-gray-100 dark:border-gray-800 flex items-center px-4 gap-4">
                     <div className="flex gap-1.5">
-                      <div className="w-3 h-3 rounded-full bg-gray-200"></div>
-                      <div className="w-3 h-3 rounded-full bg-gray-200"></div>
-                      <div className="w-3 h-3 rounded-full bg-gray-200"></div>
+                      <div className="w-3 h-3 rounded-full bg-gray-200 dark:bg-gray-800"></div>
+                      <div className="w-3 h-3 rounded-full bg-gray-200 dark:bg-gray-800"></div>
+                      <div className="w-3 h-3 rounded-full bg-gray-200 dark:bg-gray-800"></div>
                     </div>
-                    <div className="w-48 h-4 bg-gray-50 rounded-full mx-auto"></div>
+                    <div className="w-48 h-4 bg-gray-50 dark:bg-gray-800 rounded-full mx-auto"></div>
                   </div>
-                  <div className="absolute top-12 left-0 w-16 h-full bg-white border-r border-gray-100 flex flex-col items-center py-6 gap-6">
-                    <div className="w-8 h-8 rounded-lg bg-indigo-50"></div>
-                    <div className="w-8 h-8 rounded-lg bg-gray-50"></div>
-                    <div className="w-8 h-8 rounded-lg bg-gray-50"></div>
-                    <div className="w-8 h-8 rounded-lg bg-gray-50"></div>
+                  <div className="absolute top-12 left-0 w-16 h-full bg-white dark:bg-[#1E2330] border-r border-gray-100 dark:border-gray-800 flex flex-col items-center py-6 gap-6">
+                    <div className="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/40"></div>
+                    <div className="w-8 h-8 rounded-lg bg-gray-50 dark:bg-gray-800"></div>
+                    <div className="w-8 h-8 rounded-lg bg-gray-50 dark:bg-gray-800"></div>
+                    <div className="w-8 h-8 rounded-lg bg-gray-50 dark:bg-gray-800"></div>
                   </div>
                   <div className="absolute top-16 left-12 md:left-20 right-4 bottom-4 flex flex-col gap-4">
                     <div className="flex gap-2 md:gap-4 h-20 md:h-24">
-                      <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm p-2 md:p-4 flex flex-col justify-between">
-                        <div className="w-1/2 h-2 md:h-3 bg-gray-100 rounded-full"></div>
-                        <div className="w-3/4 h-4 md:h-6 bg-navy rounded-full"></div>
+                      <div className="flex-1 bg-white dark:bg-[#1E2330] border border-gray-100 dark:border-gray-800 shadow-sm p-2 md:p-4 flex flex-col justify-between">
+                        <div className="w-1/2 h-2 md:h-3 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
+                        <div className="w-3/4 h-4 md:h-6 bg-navy dark:bg-gray-200 rounded-full"></div>
                       </div>
-                      <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm p-2 md:p-4 flex flex-col justify-between">
-                        <div className="w-1/2 h-2 md:h-3 bg-gray-100 rounded-full"></div>
-                        <div className="w-2/3 h-4 md:h-6 bg-primary rounded-full"></div>
+                      <div className="flex-1 bg-white dark:bg-[#1E2330] border border-gray-100 dark:border-gray-800 shadow-sm p-2 md:p-4 flex flex-col justify-between">
+                        <div className="w-1/2 h-2 md:h-3 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
+                        <div className="w-2/3 h-4 md:h-6 bg-primary dark:bg-blue-400 rounded-full"></div>
                       </div>
                     </div>
-                    <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm flex items-end p-3 md:p-6 gap-1 md:gap-2">
-                      <div className="flex-1 bg-indigo-100 rounded-t-lg h-[40%]"></div>
-                      <div className="flex-1 bg-primary rounded-t-lg h-[80%]"></div>
-                      <div className="flex-1 bg-indigo-200 rounded-t-lg h-[60%]"></div>
-                      <div className="flex-1 bg-navy rounded-t-lg h-[100%]"></div>
-                      <div className="flex-1 bg-indigo-100 rounded-t-lg h-[50%]"></div>
+                    <div className="flex-1 bg-white dark:bg-[#1E2330] border border-gray-100 dark:border-gray-800 shadow-sm flex items-end p-3 md:p-6 gap-1 md:gap-2">
+                      <div className="flex-1 bg-indigo-100 dark:bg-indigo-950/40 rounded-t-lg h-[40%]"></div>
+                      <div className="flex-1 bg-primary dark:bg-blue-400 rounded-t-lg h-[80%]"></div>
+                      <div className="flex-1 bg-indigo-200 dark:bg-indigo-850/40 rounded-t-lg h-[60%]"></div>
+                      <div className="flex-1 bg-navy dark:bg-gray-200 rounded-t-lg h-[100%]"></div>
+                      <div className="flex-1 bg-indigo-100 dark:bg-indigo-950/40 rounded-t-lg h-[50%]"></div>
                     </div>
                   </div>
                 </div>

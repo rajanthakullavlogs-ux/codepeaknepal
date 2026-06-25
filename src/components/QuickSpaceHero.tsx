@@ -74,46 +74,46 @@ export default function QuickSpaceHero() {
               <div className="relative w-full aspect-[4/3]">
                 
                 {/* --- MAIN DASHBOARD CARD --- */}
-                <div className="absolute top-0 right-10 w-[85%] h-[85%] bg-white rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-gray-100 overflow-hidden flex z-10">
-                  <div className="w-16 bg-[#F8F9FA] border-r border-gray-100 flex flex-col items-center py-6 gap-6 text-[#A0AEC0]">
-                    <div className="w-6 h-6 rounded bg-[#E2E8F0] mb-2"></div>
+                <div className="absolute top-0 right-10 w-[85%] h-[85%] bg-white dark:bg-[#151926] rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-gray-100 dark:border-gray-800 overflow-hidden flex z-10">
+                  <div className="w-16 bg-[#F8F9FA] dark:bg-[#1E2330] border-r border-gray-100 dark:border-gray-800 flex flex-col items-center py-6 gap-6 text-[#A0AEC0] dark:text-[#718096]">
+                    <div className="w-6 h-6 rounded bg-[#E2E8F0] dark:bg-gray-800 mb-2"></div>
                     <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
                   </div>
                   
-                  <div className="flex-1 p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  <div className="flex-1 p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 bg-white dark:bg-[#151926]">
                     <div className="flex flex-col gap-4 md:gap-6">
-                      <div className="flex items-center gap-4 bg-white border border-gray-100 p-3 rounded-xl shadow-sm">
-                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500">
+                      <div className="flex items-center gap-4 bg-white dark:bg-[#1E2330] border border-gray-100 dark:border-gray-800 p-3 rounded-xl shadow-sm">
+                        <div className="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-500 dark:text-blue-400">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                         </div>
                         <div>
-                          <div className="font-bold text-gray-900 text-sm">250+</div>
-                          <div className="text-xs text-gray-400">Live Projects</div>
+                          <div className="font-bold text-gray-900 dark:text-white text-sm">250+</div>
+                          <div className="text-xs text-gray-400 dark:text-gray-400">Live Projects</div>
                         </div>
                       </div>
                       
-                      <div className="flex items-center gap-4 bg-white border border-gray-100 p-3 rounded-xl shadow-sm">
-                        <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500">
+                      <div className="flex items-center gap-4 bg-white dark:bg-[#1E2330] border border-gray-100 dark:border-gray-800 p-3 rounded-xl shadow-sm">
+                        <div className="w-10 h-10 rounded-full bg-green-50 dark:bg-green-900/30 flex items-center justify-center text-green-500 dark:text-green-400">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                         </div>
                         <div>
-                          <div className="font-bold text-gray-900 text-sm">99.9%</div>
-                          <div className="text-xs text-gray-400">System Uptime</div>
+                          <div className="font-bold text-gray-900 dark:text-white text-sm">99.9%</div>
+                          <div className="text-xs text-gray-400 dark:text-gray-400">System Uptime</div>
                         </div>
                       </div>
                       
                       <div className="mt-auto space-y-3">
-                        <button className="w-full py-2.5 rounded-lg bg-[#EAE8FF] text-[#4262FF] font-semibold text-xs text-left px-4">Start New Project</button>
-                        <button className="w-full py-2.5 rounded-lg bg-[#F3F4F6] text-gray-600 font-semibold text-xs text-left px-4">View Portfolio</button>
+                        <button className="w-full py-2.5 rounded-lg bg-[#EAE8FF] dark:bg-blue-950/40 text-[#4262FF] dark:text-blue-300 font-semibold text-xs text-left px-4">Start New Project</button>
+                        <button className="w-full py-2.5 rounded-lg bg-[#F3F4F6] dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-semibold text-xs text-left px-4">View Portfolio</button>
                       </div>
                     </div>
-
+ 
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1 text-sm">Digital Ecosystem</h3>
-                      <p className="text-[10px] text-gray-400 mb-6">Custom software tailored for you</p>
+                      <h3 className="font-bold text-gray-900 dark:text-white mb-1 text-sm">Digital Ecosystem</h3>
+                      <p className="text-[10px] text-gray-400 dark:text-gray-400 mb-6">Custom software tailored for you</p>
                       
                       <div className="w-32 h-32 rounded-full mx-auto mb-6 shadow-sm" style={{ background: 'conic-gradient(#A78BFA 0% 45%, #60A5FA 45% 75%, #34D399 75% 100%)' }}></div>
                       
@@ -121,23 +121,23 @@ export default function QuickSpaceHero() {
                         <div className="flex items-center justify-between text-xs">
                           <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full bg-[#A78BFA]"></span>
-                            <span className="text-gray-600 font-medium">Web Apps</span>
+                            <span className="text-gray-600 dark:text-gray-300 font-medium">Web Apps</span>
                           </div>
-                          <span className="font-bold">45%</span>
+                          <span className="font-bold dark:text-white">45%</span>
                         </div>
                         <div className="flex items-center justify-between text-xs">
                           <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full bg-[#60A5FA]"></span>
-                            <span className="text-gray-600 font-medium">Mobile Apps</span>
+                            <span className="text-gray-600 dark:text-gray-300 font-medium">Mobile Apps</span>
                           </div>
-                          <span className="font-bold">30%</span>
+                          <span className="font-bold dark:text-white">30%</span>
                         </div>
                         <div className="flex items-center justify-between text-xs">
                           <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full bg-[#34D399]"></span>
-                            <span className="text-gray-600 font-medium">ERP Systems</span>
+                            <span className="text-gray-600 dark:text-gray-300 font-medium">ERP Systems</span>
                           </div>
-                          <span className="font-bold">25%</span>
+                          <span className="font-bold dark:text-white">25%</span>
                         </div>
                       </div>
                     </div>

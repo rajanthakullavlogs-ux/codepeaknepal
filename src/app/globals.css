@@ -6,11 +6,19 @@
   :root {
     color-scheme: only light;
   }
-  html {
+  html, body {
+    color-scheme: only light !important;
     scroll-behavior: smooth;
   }
   body {
     @apply bg-white text-navy font-sans antialiased;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-logo {
+    filter: brightness(0) invert(1) !important;
+    mix-blend-mode: normal !important;
   }
 }
 

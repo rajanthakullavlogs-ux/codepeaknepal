@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  colorScheme: "only light",
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={plusJakarta.className}>
-          <div className="fixed inset-0 z-[100] pointer-events-none opacity-[0.03] mix-blend-multiply" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+          <div className="fixed inset-0 z-[100] pointer-events-none" style={{ backgroundImage: 'linear-gradient(var(--grid-line-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line-color) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
           {children}
           <AIChatbot />
       </body>

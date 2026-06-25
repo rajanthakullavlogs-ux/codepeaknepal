@@ -69,7 +69,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-primary font-semibold text-xs uppercase tracking-widest mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-primary font-semibold text-xs uppercase tracking-widest mb-6 dark:bg-blue-950/40 dark:border-blue-800/40 dark:text-blue-400"
           >
             Get in Touch
           </motion.div>
@@ -77,7 +77,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight mb-6"
+            className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight mb-6 dark:text-white"
           >
             Ready to start your digital journey?
           </motion.h2>
@@ -86,7 +86,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-gray-500 font-medium"
+            className="text-lg text-gray-500 font-medium dark:text-gray-400"
           >
             We'd love to hear about your project. Get a free consultation from our team today!
           </motion.p>
@@ -103,15 +103,15 @@ export default function ContactSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group flex items-start gap-5"
+                className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group flex items-start gap-5 dark:bg-[#151926] dark:border-gray-850 dark:hover:shadow-none"
               >
-                <div className="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 dark:bg-blue-950/40 dark:text-blue-400">
                   {method.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-navy mb-1">{method.title}</h3>
-                  <p className="text-gray-500 text-sm font-medium mb-2">{method.desc}</p>
-                  <p className="text-navy font-semibold">{method.value}</p>
+                  <h3 className="text-xl font-bold text-navy mb-1 dark:text-white">{method.title}</h3>
+                  <p className="text-gray-500 text-sm font-medium mb-2 dark:text-gray-400">{method.desc}</p>
+                  <p className="text-navy font-semibold dark:text-gray-200">{method.value}</p>
                 </div>
               </motion.div>
             ))}
@@ -125,15 +125,15 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="lg:w-2/3 w-full bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-gray-200/50 border border-gray-100"
+            className="lg:w-2/3 w-full bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-gray-200/50 border border-gray-100 dark:bg-[#151926] dark:border-gray-850 dark:shadow-none"
           >
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center dark:bg-blue-950/40 dark:text-blue-400">
                 <MessageSquare className="w-6 h-6" />
               </div>
               <div>
-                <h2 className="text-3xl font-extrabold text-navy">Send us a Message</h2>
-                <p className="text-gray-500 font-medium">We'll respond within 24 hours.</p>
+                <h2 className="text-3xl font-extrabold text-navy dark:text-white">Send us a Message</h2>
+                <p className="text-gray-500 font-medium dark:text-gray-400">We'll respond within 24 hours.</p>
               </div>
             </div>
 
@@ -141,16 +141,16 @@ export default function ContactSection() {
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-green-50/80 backdrop-blur-sm border border-green-200 text-green-800 p-8 rounded-[2rem] text-center"
+                className="bg-green-50/80 backdrop-blur-sm border border-green-200 text-green-800 p-8 rounded-[2rem] text-center dark:bg-green-950/20 dark:border-green-900/40 dark:text-green-300"
               >
-                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 dark:bg-green-950/50 dark:text-green-400">
                   <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Message Received!</h3>
-                <p className="text-green-700 font-medium mb-6">Thank you for reaching out. Our team will contact you shortly.</p>
+                <p className="text-green-700 font-medium mb-6 dark:text-green-400">Thank you for reaching out. Our team will contact you shortly.</p>
                 <button 
                   onClick={() => setSuccess(false)}
-                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-green-700 font-bold rounded-xl shadow-sm hover:shadow-md transition-all"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-green-700 font-bold rounded-xl shadow-sm hover:shadow-md transition-all dark:bg-[#1E2330] dark:text-green-400 dark:border-gray-800 border"
                 >
                   Send another message
                 </button>
@@ -158,14 +158,14 @@ export default function ContactSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 {error && (
-                  <div className="bg-red-50 text-red-700 p-4 rounded-xl text-sm border border-red-200 font-medium">
+                  <div className="bg-red-50 text-red-700 p-4 rounded-xl text-sm border border-red-200 font-medium dark:bg-red-950/20 dark:border-red-900/40 dark:text-red-400">
                     {error}
                   </div>
                 )}
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-navy ml-1">Full Name</label>
+                    <label className="text-sm font-bold text-navy ml-1 dark:text-gray-300">Full Name</label>
                     <input 
                       type="text" 
                       name="name"
@@ -173,11 +173,11 @@ export default function ContactSection() {
                       onChange={handleChange}
                       required
                       placeholder="Your name" 
-                      className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-navy placeholder:text-gray-400" 
+                      className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-navy placeholder:text-gray-400 dark:bg-[#1E2330] dark:border-gray-800 dark:text-white dark:focus:bg-[#1E2330] dark:placeholder:text-gray-550" 
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-navy ml-1">Email Address</label>
+                    <label className="text-sm font-bold text-navy ml-1 dark:text-gray-300">Email Address</label>
                     <input 
                       type="email" 
                       name="email"
@@ -185,14 +185,14 @@ export default function ContactSection() {
                       onChange={handleChange}
                       required
                       placeholder="your@email.com" 
-                      className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-navy placeholder:text-gray-400" 
+                      className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-navy placeholder:text-gray-400 dark:bg-[#1E2330] dark:border-gray-800 dark:text-white dark:focus:bg-[#1E2330] dark:placeholder:text-gray-550" 
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-navy ml-1">Phone Number</label>
+                    <label className="text-sm font-bold text-navy ml-1 dark:text-gray-300">Phone Number</label>
                     <input 
                       type="tel" 
                       name="phone"
@@ -200,11 +200,11 @@ export default function ContactSection() {
                       onChange={handleChange}
                       required
                       placeholder="+977 98XXXXXXXX" 
-                      className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-navy placeholder:text-gray-400" 
+                      className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-navy placeholder:text-gray-400 dark:bg-[#1E2330] dark:border-gray-800 dark:text-white dark:focus:bg-[#1E2330] dark:placeholder:text-gray-550" 
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-navy ml-1">Project Subject</label>
+                    <label className="text-sm font-bold text-navy ml-1 dark:text-gray-300">Project Subject</label>
                     <input 
                       type="text" 
                       name="subject"
@@ -212,13 +212,13 @@ export default function ContactSection() {
                       onChange={handleChange}
                       required
                       placeholder="How can we help?" 
-                      className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-navy placeholder:text-gray-400" 
+                      className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-navy placeholder:text-gray-400 dark:bg-[#1E2330] dark:border-gray-800 dark:text-white dark:focus:bg-[#1E2330] dark:placeholder:text-gray-550" 
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-navy ml-1">Message</label>
+                  <label className="text-sm font-bold text-navy ml-1 dark:text-gray-300">Message</label>
                   <textarea 
                     name="message"
                     value={formData.message}
@@ -226,14 +226,14 @@ export default function ContactSection() {
                     required
                     placeholder="Tell us about your project..." 
                     rows={5} 
-                    className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none resize-none transition-all font-medium text-navy placeholder:text-gray-400"
+                    className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none resize-none transition-all font-medium text-navy placeholder:text-gray-400 dark:bg-[#1E2330] dark:border-gray-800 dark:text-white dark:focus:bg-[#1E2330] dark:placeholder:text-gray-550"
                   ></textarea>
                 </div>
 
                 <button 
                   type="submit" 
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-5 rounded-2xl hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 transition-all text-lg disabled:opacity-70 disabled:cursor-not-allowed group"
+                  className="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-5 rounded-2xl hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 transition-all text-lg disabled:opacity-70 disabled:cursor-not-allowed group dark:bg-primary dark:hover:bg-blue-700 dark:text-white"
                 >
                   {loading ? 'Sending Message...' : 'Send Message'}
                   {!loading && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}

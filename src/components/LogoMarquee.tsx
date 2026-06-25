@@ -47,10 +47,10 @@ export default function TechStackMarquee() {
                   key={i} 
                   className="flex items-center gap-3 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer min-w-max"
                 >
-                  <div className="w-10 h-10 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center text-primary shadow-sm">
+                  <div className="w-10 h-10 bg-gray-50 dark:bg-[#1E2330] border border-gray-100 dark:border-gray-800 rounded-xl flex items-center justify-center text-primary shadow-sm">
                     {tech.icon}
                   </div>
-                  <span className="text-xl font-bold text-gray-400 hover:text-navy transition-colors tracking-widest">
+                  <span className="text-xl font-bold text-gray-400 dark:text-gray-500 hover:text-navy dark:hover:text-white transition-colors tracking-widest">
                     {tech.name}
                   </span>
                 </div>

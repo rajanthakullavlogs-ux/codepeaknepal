@@ -26,9 +26,9 @@ export default function About() {
   ];
 
   return (
-    <main className="min-h-screen pt-20 bg-offwhite relative">
+    <main className="min-h-screen pt-20 bg-offwhite dark:bg-[#0B0F19] relative">
       {/* Global subtle grid background for the whole page */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--radial-grid-color) 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
       
       <Navbar />
       
@@ -38,7 +38,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-600 font-semibold text-sm uppercase tracking-widest mb-6 shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-[#1E2330] border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 font-semibold text-sm uppercase tracking-widest mb-6 shadow-sm"
           >
             About CodePeak Nepal
           </motion.div>
@@ -46,7 +46,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-extrabold text-navy mb-4 leading-tight tracking-tight"
+            className="text-4xl md:text-5xl font-extrabold text-navy dark:text-white mb-4 leading-tight tracking-tight"
           >
             Transforming businesses through affordable digital solutions.
           </motion.h1>
@@ -64,11 +64,11 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-3xl md:text-4xl font-bold text-navy mb-8 tracking-tight"
+                className="text-3xl md:text-4xl font-bold text-navy dark:text-white mb-8 tracking-tight"
               >
                 Our Story
               </motion.h2>
-              <div className="space-y-6 text-base md:text-lg text-gray-500 leading-relaxed font-medium">
+              <div className="space-y-6 text-base md:text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
                 <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
                   CodePeak Nepal was founded with a clear vision: to democratize digital technology for Nepali businesses. We recognized that many organizations in Nepal were being left behind digitally, not because they didn't need digital solutions, but because they couldn't afford the premium prices charged by larger agencies.
                 </motion.p>
@@ -91,13 +91,13 @@ export default function About() {
                 viewport={{ once: true }}
                 className="flex gap-6 group"
               >
-                <div className="w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center shrink-0 text-primary font-bold shadow-sm group-hover:scale-110 group-hover:border-primary/30 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#151926] flex items-center justify-center shrink-0 text-primary font-bold shadow-sm group-hover:scale-110 group-hover:border-primary/30 transition-all duration-300">
                   01
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-navy mb-2 tracking-tight uppercase">Our Mission</h3>
-                  <h4 className="text-lg font-bold text-navy mb-3 leading-snug">Empowering every Nepali business with world-class digital tools.</h4>
-                  <p className="text-base text-gray-500 leading-relaxed font-medium">
+                  <h3 className="text-xl font-bold text-navy dark:text-white mb-2 tracking-tight uppercase">Our Mission</h3>
+                  <h4 className="text-lg font-bold text-navy dark:text-white mb-3 leading-snug">Empowering every Nepali business with world-class digital tools.</h4>
+                  <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
                     To make professional digital services affordable and accessible for every business in Nepal. We are committed to empowering organizations of all sizes—from single-person startups to growing enterprises—with world-class digital solutions at fair, transparent prices.
                   </p>
                 </div>
@@ -111,13 +111,13 @@ export default function About() {
                 transition={{ delay: 0.1 }}
                 className="flex gap-6 group"
               >
-                <div className="w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center shrink-0 text-primary font-bold shadow-sm group-hover:scale-110 group-hover:border-primary/30 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#151926] flex items-center justify-center shrink-0 text-primary font-bold shadow-sm group-hover:scale-110 group-hover:border-primary/30 transition-all duration-300">
                   02
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-navy mb-2 tracking-tight uppercase">Our Vision</h3>
-                  <h4 className="text-lg font-bold text-navy mb-3 leading-snug">To become the most trusted digital engineering partner in Nepal.</h4>
-                  <p className="text-base text-gray-500 leading-relaxed font-medium">
+                  <h3 className="text-xl font-bold text-navy dark:text-white mb-2 tracking-tight uppercase">Our Vision</h3>
+                  <h4 className="text-lg font-bold text-navy dark:text-white mb-3 leading-snug">To become the most trusted digital engineering partner in Nepal.</h4>
+                  <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
                     We aspire to be known for exceptional quality, unmatched affordability, and support that goes beyond expectations. Every day, we work to be the partner that empowers Nepali businesses to compete globally.
                   </p>
                 </div>
@@ -133,8 +133,8 @@ export default function About() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-4 tracking-tight">Our Core Values</h2>
-            <p className="text-base text-gray-500 font-medium">The principles that guide our work, shape our culture, and drive our commitment to excellence.</p>
+            <h2 className="text-3xl font-bold text-navy dark:text-white mb-4 tracking-tight">Our Core Values</h2>
+            <p className="text-base text-gray-500 dark:text-gray-400 font-medium">The principles that guide our work, shape our culture, and drive our commitment to excellence.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {coreValues.map((value, idx) => (
@@ -144,13 +144,13 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-2xl border border-gray-200 bg-gray-50 hover:bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
+                className="p-8 rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-[#1E2330]/40 hover:bg-white dark:hover:bg-[#151926] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
               >
-                <div className="w-14 h-14 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-white dark:bg-[#151926] rounded-xl shadow-sm border border-gray-100 dark:border-gray-850 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   {value.icon}
                 </div>
-                <h4 className="text-xl font-bold text-navy mb-4">{value.title}</h4>
-                <p className="text-gray-500 font-medium leading-relaxed">{value.desc}</p>
+                <h4 className="text-xl font-bold text-navy dark:text-white mb-4">{value.title}</h4>
+                <p className="text-gray-500 dark:text-gray-400 font-medium leading-relaxed">{value.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -161,8 +161,8 @@ export default function About() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-4 tracking-tight">Meet Our Expert Team</h2>
-            <p className="text-base text-gray-500 font-medium">Passionate professionals dedicated to bringing your vision to life with excellence.</p>
+            <h2 className="text-3xl font-bold text-navy dark:text-white mb-4 tracking-tight">Meet Our Expert Team</h2>
+            <p className="text-base text-gray-500 dark:text-gray-400 font-medium">Passionate professionals dedicated to bringing your vision to life with excellence.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {team.map((member, idx) => (
@@ -172,23 +172,23 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-[2rem] p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center"
+                className="bg-white dark:bg-[#151926] rounded-[2rem] p-6 border border-gray-100 dark:border-gray-850 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col items-center"
               >
-                <div className={`w-28 h-28 rounded-full ${member.color} flex items-center justify-center mb-6 overflow-hidden relative`}>
+                <div className={`w-28 h-28 rounded-full ${member.color} dark:bg-gray-800 flex items-center justify-center mb-6 overflow-hidden relative`}>
                   {member.image ? (
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   ) : (
-                    <span className="text-3xl font-bold text-navy opacity-50">{member.initial}</span>
+                    <span className="text-3xl font-bold text-navy dark:text-white/60 opacity-50">{member.initial}</span>
                   )}
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg font-bold text-navy mb-1">{member.name}</h3>
-                  <div className="inline-block px-3 py-1 rounded-full bg-blue-50 text-primary text-xs font-semibold mb-4">
+                  <h3 className="text-lg font-bold text-navy dark:text-white mb-1">{member.name}</h3>
+                  <div className="inline-block px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-400 text-xs font-semibold mb-4">
                     {member.role}
                   </div>
-                  <div className="space-y-1 pt-4 border-t border-gray-100 w-full">
-                    <p className="text-xs text-gray-500 font-medium">{member.exp}</p>
-                    <p className="text-xs text-gray-400">{member.focus}</p>
+                  <div className="space-y-1 pt-4 border-t border-gray-100 dark:border-gray-850 w-full">
+                    <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">{member.exp}</p>
+                    <p className="text-xs text-gray-400 dark:text-gray-500">{member.focus}</p>
                   </div>
                 </div>
               </motion.div>

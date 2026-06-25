@@ -14,9 +14,9 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-offwhite relative">
+    <main className="min-h-screen bg-offwhite dark:bg-[#0B0F19] relative">
       {/* Global subtle grid background for the whole page */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--radial-grid-color) 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
       <Navbar />
       <QuickSpaceHero />
       <LogoMarquee />

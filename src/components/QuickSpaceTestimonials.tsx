@@ -29,23 +29,23 @@ export default function QuickSpaceTestimonials() {
   const marqueeItems = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
 
   return (
-    <section className="py-20 overflow-hidden border-b border-gray-100 relative">
+    <section className="py-20 overflow-hidden border-b border-gray-100 dark:border-gray-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="flex flex-col md:flex-row justify-between items-end gap-8">
           <div className="max-w-2xl">
             <ScrollReveal delay={0}>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white border border-gray-200 text-gray-600 font-semibold text-xs uppercase tracking-widest mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white dark:bg-[#1E2330] border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 font-semibold text-xs uppercase tracking-widest mb-6">
                 Client Feedback
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-navy dark:text-white tracking-tight leading-tight">
                 Trusted by Industry Leaders
               </h2>
             </ScrollReveal>
           </div>
           <ScrollReveal delay={0.2}>
-            <p className="text-lg text-gray-500 max-w-md md:text-right font-medium">
+            <p className="text-lg text-gray-500 dark:text-gray-400 max-w-md md:text-right font-medium">
               Read how we have empowered businesses across Nepal with high-performance digital solutions.
             </p>
           </ScrollReveal>
@@ -69,18 +69,18 @@ export default function QuickSpaceTestimonials() {
             {marqueeItems.map((test, idx) => (
               <div
                 key={idx}
-                className="w-[350px] md:w-[420px] shrink-0 bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between border border-gray-100"
+                className="w-[350px] md:w-[420px] shrink-0 bg-white dark:bg-[#151926] p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between border border-gray-100 dark:border-gray-800"
               >
-                <p className="text-gray-500 text-lg leading-relaxed font-medium flex-grow mb-8">
+                <p className="text-gray-500 dark:text-gray-300 text-lg leading-relaxed font-medium flex-grow mb-8">
                   "{test.quote}"
                 </p>
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-50">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-gray-100 shadow-sm">
+                <div className="flex items-center gap-4 pt-6 border-t border-gray-50 dark:border-gray-800">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm">
                     <img src={test.avatar} alt={test.name} className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <h4 className="text-navy font-bold">{test.name}</h4>
-                    <p className="text-gray-400 text-sm font-medium">{test.role}</p>
+                    <h4 className="text-navy dark:text-white font-bold">{test.name}</h4>
+                    <p className="text-gray-400 dark:text-gray-500 text-sm font-medium">{test.role}</p>
                   </div>
                 </div>
               </div>

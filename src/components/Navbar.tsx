@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[1200px] h-[72px] z-[100] transition-all duration-300 ease-in-out border border-gray-100 bg-white rounded-full ${
+        className={`fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[1200px] h-[72px] z-[100] transition-all duration-300 ease-in-out border border-gray-100 dark:border-gray-800/80 bg-white dark:bg-[#151926]/90 dark:backdrop-blur-md rounded-full ${
           scrolled ? "shadow-[0_4px_24px_rgba(0,0,0,0.06)]" : "shadow-sm"
         }`}
       >
@@ -47,7 +47,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="font-sans font-medium text-[15px] text-gray-500 hover:text-navy transition-colors"
+                className="font-sans font-medium text-[15px] text-gray-500 dark:text-gray-400 hover:text-navy dark:hover:text-white transition-colors"
               >
                 {link.name}
               </Link>
@@ -57,7 +57,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <Link 
               href="/contact" 
-              className="px-6 py-2.5 bg-gray-100 hover:bg-gray-200 text-navy rounded-full font-medium transition-colors"
+              className="px-6 py-2.5 bg-gray-100 hover:bg-gray-200 text-navy dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white rounded-full font-medium transition-colors"
             >
               Get started
             </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-navy p-2"
+            className="md:hidden text-navy dark:text-white p-2"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open Menu"
           >
@@ -76,11 +76,11 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-[1000] bg-white transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col ${
+        className={`fixed inset-0 z-[1000] bg-white dark:bg-[#0B0F19] transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="px-6 h-[88px] flex items-center justify-between border-b border-gray-100 shrink-0">
+        <div className="px-6 h-[88px] flex items-center justify-between border-b border-gray-100 dark:border-gray-800 shrink-0">
           <Link href="/" className="flex items-center gap-2 group" onClick={() => setMobileMenuOpen(false)}>
             <img 
               src="/assets/codepeak-logo.png" 
@@ -89,21 +89,21 @@ export default function Navbar() {
             />
           </Link>
           <button
-            className="text-navy p-2 rounded-full hover:bg-gray-100"
+            className="text-navy dark:text-white p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
             onClick={() => setMobileMenuOpen(false)}
             aria-label="Close Menu"
           >
             <X size={24} />
           </button>
         </div>
-
+ 
         <nav className="flex-1 overflow-y-auto px-6 py-8 flex flex-col gap-6">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="font-sans text-2xl font-medium text-gray-600 hover:text-navy flex items-center justify-between border-b border-gray-100 pb-4"
+              className="font-sans text-2xl font-medium text-gray-600 dark:text-gray-300 hover:text-navy dark:hover:text-white flex items-center justify-between border-b border-gray-100 dark:border-gray-800 pb-4"
             >
               {link.name}
               <ChevronRight className="text-primary" />

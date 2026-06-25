@@ -29,36 +29,36 @@ export default function QuickSpaceSplitSections() {
   return (
     <div className="overflow-hidden">
       {/* Section 1: Enterprise Software */}
-      <section className="py-16 border-t border-gray-100">
+      <section className="py-16 border-t border-gray-100 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             
             <div className="flex-1">
               <ScrollReveal delay={0}>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#111111] mb-6 leading-tight max-w-lg">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#111111] dark:text-white mb-6 leading-tight max-w-lg">
                   Scalable Enterprise Architecture & Custom Software.
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <p className="text-gray-800 mb-10 max-w-lg leading-relaxed text-lg">
+                <p className="text-gray-800 dark:text-gray-300 mb-10 max-w-lg leading-relaxed text-lg">
                   CodePeak Nepal architects high-performance, custom-built ERP and management systems designed to streamline your operations and scale effortlessly as your business grows.
                 </p>
               </ScrollReveal>
 
               <div className="space-y-8">
                 <ScrollReveal delay={0.2}>
-                  <h4 className="text-lg font-bold text-[#111111] mb-2 flex items-center gap-2">
+                  <h4 className="text-lg font-bold text-[#111111] dark:text-white mb-2 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
                     Intelligent Integrations
                   </h4>
-                  <p className="text-gray-800 text-sm max-w-md">Seamlessly connect your existing workflows with custom APIs, modern frontends, and robust backend systems.</p>
+                  <p className="text-gray-800 dark:text-gray-400 text-sm max-w-md">Seamlessly connect your existing workflows with custom APIs, modern frontends, and robust backend systems.</p>
                 </ScrollReveal>
                 <ScrollReveal delay={0.3}>
-                  <h4 className="text-lg font-bold text-[#111111] mb-2 flex items-center gap-2">
+                  <h4 className="text-lg font-bold text-[#111111] dark:text-white mb-2 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-green-500"></span>
                     Enterprise-Grade Security
                   </h4>
-                  <p className="text-gray-800 text-sm max-w-md">We implement robust security protocols, ensuring your corporate data is protected at all times against modern threats.</p>
+                  <p className="text-gray-800 dark:text-gray-400 text-sm max-w-md">We implement robust security protocols, ensuring your corporate data is protected at all times against modern threats.</p>
                 </ScrollReveal>
               </div>
             </div>
@@ -115,12 +115,12 @@ export default function QuickSpaceSplitSections() {
             
             <div className="flex-1">
               <ScrollReveal delay={0}>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#111111] mb-6 leading-tight max-w-lg">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#111111] dark:text-white mb-6 leading-tight max-w-lg">
                   Next-Gen Digital Products & Mobile Experiences.
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <p className="text-gray-800 mb-10 max-w-lg leading-relaxed text-lg">
+                <p className="text-gray-800 dark:text-gray-300 mb-10 max-w-lg leading-relaxed text-lg">
                   From scalable cloud platforms to native iOS and Android applications, we deliver digital products that drive user engagement and exponential growth.
                 </p>
               </ScrollReveal>
@@ -130,18 +130,18 @@ export default function QuickSpaceSplitSections() {
                   const isOpen = openFaq === idx;
                   return (
                     <ScrollReveal key={idx} delay={0.2 + (idx * 0.1)}>
-                      <div className="border-b border-gray-100 pb-4">
+                      <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
                         <button 
                           onClick={() => setOpenFaq(isOpen ? null : idx)}
                           className="w-full flex justify-between items-center text-left focus:outline-none"
                         >
-                          <span className={`font-bold text-lg ${isOpen ? 'text-primary' : 'text-[#111111]'}`}>{faq.title}</span>
+                          <span className={`font-bold text-lg ${isOpen ? 'text-primary' : 'text-[#111111] dark:text-white'}`}>{faq.title}</span>
                           {isOpen ? <Minus className="w-5 h-5 text-primary shrink-0" /> : <Plus className="w-5 h-5 text-primary shrink-0" />}
                         </button>
                         
                         {/* Expanded Content */}
                         <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-40 mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
-                          <p className="text-gray-800 text-sm leading-relaxed pr-8">
+                          <p className="text-gray-800 dark:text-gray-400 text-sm leading-relaxed pr-8">
                             {faq.desc}
                           </p>
                         </div>

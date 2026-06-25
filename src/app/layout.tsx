@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import AIChatbot from "@/components/AIChatbot";
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
-
-
 export const metadata: Metadata = {
   title: "Code Peak Nepal | Innovative Digital Solutions",
   description: "Management Softwares, AI Products & Professional Digital Solutions",
+};
+
+export const viewport: Viewport = {
+  colorScheme: "only light",
 };
 
 export default function RootLayout({

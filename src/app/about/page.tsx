@@ -19,7 +19,7 @@ export default function About() {
 
   const team = [
     { name: "Rajan Thakulla", role: "Founder & Lead Engineer", exp: "3+ years experience", focus: "Mobile, Web and Backend", color: "bg-blue-100", initial: "RT", image: "/team/founder.jpeg" },
-    { name: "Anushka Chand", role: "UI/UX Designer Head", exp: "Creative & Design Lead", focus: "UI/UX Design", color: "bg-pink-100", initial: "AC" },
+    { name: "Anushka Chand", role: "UI/UX Designer Head", exp: "Creative & Design Lead", focus: "UI/UX Design", color: "bg-pink-100", initial: "AC", image: "/team/anushka.png" },
     { name: "Raunak Bikram Shah", role: "App Developer", exp: "Mobile Development", focus: "App Development", color: "bg-orange-100", initial: "RS", image: "/team/raunak.jpg" },
     { name: "Akshat Mittal", role: "Full Stack Developer", exp: "2+ years in Web Development", focus: "Web Development", color: "bg-indigo-100", initial: "AM", image: "/team/designer.jpeg" },
     { name: "Ratik Rauniyar", role: "Full Stack Developer", exp: "2+ years in Web Development", focus: "Web Development", color: "bg-green-100", initial: "RR", image: "/team/support.jpeg" }

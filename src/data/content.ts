@@ -211,7 +211,7 @@ export const PRICING_CONTENT = {
       category: "website",
       name: "Basic Website",
       badge: "🥉 Salons, Gyms & Spas",
-      price: "NPR 15,000",
+      price: "Around NPR 15,000",
       delivery: "⏱️ Delivery in 5–10 days",
       popular: false,
       features: ["Mobile-responsive design", "Services & Gallery pages", "Contact form & Google Maps", "Social media & WhatsApp links", "Basic SEO setup", "Add Admin Panel for NPR 5,000"]
@@ -220,7 +220,7 @@ export const PRICING_CONTENT = {
       category: "website",
       name: "Professional Site",
       badge: "🥈 Consultancies & Schools",
-      price: "NPR 20,000",
+      price: "Around NPR 20,000",
       delivery: "⏱️ Delivery in 7–14 days",
       popular: true,
       features: ["Trust-building modern design", "Team & Staff profiles", "Testimonials & Success stories", "Notice board & Announcements", "Advanced inquiry forms", "Add Admin Panel for NPR 5,000"]
@@ -229,7 +229,7 @@ export const PRICING_CONTENT = {
       category: "website",
       name: "Booking & Advanced",
       badge: "🥇 Hotels, Tours & Clinics",
-      price: "NPR 30,000",
+      price: "Around NPR 30,000",
       delivery: "⏱️ Delivery in 14–21 days",
       popular: false,
       features: ["Online booking & reservation", "Calendar & availability", "Automated email/SMS", "Basic payment integration", "Admin Panel INCLUDED", "Blog & News section"]
@@ -238,7 +238,7 @@ export const PRICING_CONTENT = {
       category: "website",
       name: "E-Commerce Stores",
       badge: "🛒 Online Retailers",
-      price: "NPR 60,000+",
+      price: "Around NPR 60,000+",
       delivery: "⏱️ Delivery in 3–8 weeks",
       popular: false,
       features: ["Full online shopping cart", "eSewa/Khalti/Stripe Integration", "Order tracking & management", "Inventory & Discount systems", "Admin Dashboard INCLUDED", "SEO & Speed Optimized"]
@@ -249,7 +249,7 @@ export const PRICING_CONTENT = {
       category: "app",
       name: "Starter App",
       badge: "📱 Small Businesses",
-      price: "NPR 60,000",
+      price: "Around NPR 60,000",
       delivery: "⏱️ Delivery in 3–4 weeks",
       popular: false,
       features: ["Native performance (Flutter)", "Cross-platform (iOS & Android)", "Standard UI/UX design", "Push notifications", "App Store/Play Store upload", "Basic API Integration"]
@@ -258,7 +258,7 @@ export const PRICING_CONTENT = {
       category: "app",
       name: "Business App",
       badge: "💼 Growing Companies",
-      price: "NPR 100,000",
+      price: "Around NPR 100,000",
       delivery: "⏱️ Delivery in 5–8 weeks",
       popular: true,
       features: ["Advanced UI/UX animations", "User Authentication", "Real-time Database", "In-App Messaging/Chat", "Social Media Login", "Admin Dashboard for App"]
@@ -267,7 +267,7 @@ export const PRICING_CONTENT = {
       category: "app",
       name: "E-Commerce App",
       badge: "🛍️ Online Retail Stores",
-      price: "NPR 150,000",
+      price: "Around NPR 150,000",
       delivery: "⏱️ Delivery in 8–12 weeks",
       popular: false,
       features: ["Full Product Catalog", "Payment Gateway Integration", "Order & Delivery Tracking", "Wishlist & Cart System", "User Reviews & Ratings", "Inventory Management"]
@@ -276,7 +276,7 @@ export const PRICING_CONTENT = {
       category: "app",
       name: "Enterprise App",
       badge: "🏢 Large Scale Apps",
-      price: "NPR 250,000+",
+      price: "Around NPR 250,000+",
       delivery: "⏱️ Timeline varies",
       popular: false,
       features: ["Complex Custom Architectures", "Multi-role Access Control", "Third-party ERP Integrations", "Advanced Analytics", "Offline Sync Capabilities", "High-security standards"]
@@ -287,7 +287,7 @@ export const PRICING_CONTENT = {
       category: "software",
       name: "Basic Management",
       badge: "📊 Internal Tools",
-      price: "NPR 80,000",
+      price: "Around NPR 80,000",
       delivery: "⏱️ Delivery in 4–6 weeks",
       popular: false,
       features: ["Single-module system", "Basic Data Entry Forms", "Simple Reporting", "User Login & Roles", "Cloud Deployment", "Secure Database"]
@@ -296,7 +296,7 @@ export const PRICING_CONTENT = {
       category: "software",
       name: "School/Hostel ERP",
       badge: "🎓 Educational Institutes",
-      price: "NPR 120,000",
+      price: "Around NPR 120,000",
       delivery: "⏱️ Delivery in 6–10 weeks",
       popular: true,
       features: ["Student & Staff Management", "Attendance & Fees Tracking", "Exam & Results Portal", "Notice Board & SMS Alerts", "Parent Login Portal", "Automated Billing"]
@@ -305,7 +305,7 @@ export const PRICING_CONTENT = {
       category: "software",
       name: "Multi-branch ERP",
       badge: "🏢 Corporate Chains",
-      price: "NPR 200,000",
+      price: "Around NPR 200,000",
       delivery: "⏱️ Delivery in 10–16 weeks",
       popular: false,
       features: ["Centralized Head Office view", "Multi-location data sync", "Advanced Inventory Tracking", "Comprehensive HR & Payroll", "Supplier Management", "Financial Reports"]
@@ -314,16 +314,16 @@ export const PRICING_CONTENT = {
       category: "software",
       name: "Enterprise CRM",
       badge: "🚀 Large Enterprises",
-      price: "NPR 300,000+",
+      price: "Around NPR 300,000+",
       delivery: "⏱️ Timeline varies",
       popular: false,
       features: ["Fully bespoke architecture", "AI-driven analytics integration", "Automated workflow pipelines", "API development for 3rd parties", "Load-balanced cloud servers", "24/7 Enterprise Support"]
     }
   ],
   renewals: [
-    { title: "Hosting Setup & Renewal", price: "Varies", desc: "We recommend Vercel/AWS. Costs depend on usage.", icon: "globe" },
-    { title: "Maintenance (.com domain)", price: "NPR 4,000/year", desc: "Bug fixes, content updates, hosting management.", icon: "wrench" },
-    { title: "Maintenance (.com.np domain)", price: "NPR 1,500/year", desc: "Bug fixes, content updates, hosting management.", icon: "shield" }
+    { title: "Hosting Setup & Renewal", price: "Varies by usage", desc: "We recommend Vercel/AWS. Costs depend on usage.", icon: "globe" },
+    { title: "Maintenance (.com domain)", price: "Around NPR 4,000/year", desc: "Bug fixes, content updates, hosting management.", icon: "wrench" },
+    { title: "Maintenance (.com.np domain)", price: "Around NPR 1,500/year", desc: "Bug fixes, content updates, hosting management.", icon: "shield" }
   ],
   process: [
     { step: "1", title: "50% Advance Payment", desc: "Secure your project and begin development immediately" },

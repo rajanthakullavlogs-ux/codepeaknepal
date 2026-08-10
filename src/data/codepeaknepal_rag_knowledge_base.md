@@ -4,7 +4,7 @@
 
 ---
 
-> **ABOUT THIS DOCUMENT:** This is the official knowledge base document for CodePeak Nepal's AI chatbot. It contains thousands of questions and detailed answers covering all services, pricing, technologies, processes, and general inquiries a potential client might ask. All prices are in Nepalese Rupees (NPR). For any pricing inquiry, always mention contacting CodePeak Nepal directly for a custom quote at **+977 9743568595**.
+> **ABOUT THIS DOCUMENT:** This is the official knowledge base document for CodePeak Nepal's AI chatbot. It contains thousands of questions and detailed answers covering all services, pricing, technologies, processes, and general inquiries a potential client might ask. All prices are starting estimates in Nepalese Rupees (NPR) strictly for Nepali businesses, and might change as per country to country based on scope and local requirements. For any pricing inquiry, always mention contacting CodePeak Nepal directly for a custom quote at **+977 9743568595**.
 
 ---
 

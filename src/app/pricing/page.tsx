@@ -57,9 +57,21 @@ export default function Pricing() {
           <h1 className="text-5xl md:text-6xl font-extrabold text-navy dark:text-white mb-6 tracking-tight">
             {PRICING_CONTENT.heading}
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-6">
             {PRICING_CONTENT.subtext}
           </p>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-900 dark:text-amber-300 text-sm font-medium max-w-2xl mx-auto text-center shadow-sm"
+          >
+            <Globe className="w-4 h-4 shrink-0 text-amber-600 dark:text-amber-400" />
+            <span>
+              <strong className="font-semibold">Important Note:</strong> These prices apply strictly to Nepali businesses and might change as per country to country based on local requirements and scope.
+            </span>
+          </motion.div>
         </motion.div>
       </section>
 
